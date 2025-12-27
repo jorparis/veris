@@ -1,601 +1,521 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
   <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>VERIS | La verdad es tu mejor medicina</title>
-  
-      <!-- Tailwind CSS CDN -->
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-      <!-- Google Fonts: Playfair Display e Inter -->
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
-  
-      <!-- Lucide Icons -->
-  
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <script>
-
-            tailwind.config = {
-
-                          theme: {
-
-                                            extend: {
-
-                                                                  colors: {
-
-                                                                                            emerald: {
-
-                                                                                              50: '#ecfdf5',
-
-                                                                                              100: '#d1fae5',
-
-                                                                                              500: '#10B981',
-
-                                                                                              600: '#059669',
-
-                                                                                            },
-
-                                                                                            rose: {
-
-                                                                                              50: '#fff1f2',
-
-                                                                                              500: '#F43F5E',
-
-                                                                                              600: '#e11d48',
-
-                                                                                            },
-
-                                                                                            slate: {
-
-                                                                                              900: '#0F172A',
-
-                                                                                            },
-
-                                                                                            bone: '#FBFBFE',
-
-                                                                  },
-
-                                                                  fontFamily: {
-
-                                                                                            sans: ['Inter', 'sans-serif'],
-
-                                                                                            serif: ['Playfair Display', 'serif'],
-
-                                                                  },
-
-                                            }
-
-                          }
-
-            }
-
-              </script>
-
-    <style>
-
-              body { background-color: #FBFBFE; }
-
-      .glass {
-
-                    background: rgba(255, 255, 255, 0.7);
-
-                    backdrop-filter: blur(20px);
-
-        -webkit-backdrop-filter: blur(20px);
-
-      }
-
-      .bento-card {
-
-                    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-      }
-
-      .bento-card:hover {
-
-                    transform: translateY(-5px);
-
-      }
-
-      @keyframes fade-up {
-
-        from { opacity: 0; transform: translateY(20px); }
-
-                    to { opacity: 1; transform: translateY(0); }
-
-      }
-
-      .animate-fade-up {
-
-                    animation: fade-up 0.8s ease-out forwards;
-
-      }
-
-      </style>
-
-  </head>
-
-  <body class="selection:bg-emerald-100 selection:text-emerald-900">
-
-
-
-
-        <!-- NAVIGATION -->
-
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-6 py-4">
-
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-
-        <div class="flex items-center gap-8">
-
-          <h1 class="text-3xl font-serif italic font-black tracking-tighter text-slate-900">VERIS.</h1>h1>
-
-          <div class="hidden md:flex items-center gap-6 text-[10px] font-black uppercase tracking-widest text-slate-400">
-
-            <a href="#ciencia" class="hover:text-emerald-500 transition-colors">Ciencia</a>a>
-
-            <a href="#tecnologia" class="hover:text-emerald-500 transition-colors">Tecnología</a>a>
-
-            <a href="#integridad" class="hover:text-emerald-500 transition-colors">Integridad</a>a>
-
-          </div>div>
-
-        </div>div>
-
-        <div class="flex items-center gap-4">
-
-          <button class="text-[10px] font-black uppercase tracking-widest text-slate-900 hidden sm:block">Log In</button>button>
-
-          <button class="bg-slate-900 text-white px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl shadow-slate-900/10 active:scale-95 transition-transform">
-
-            Descargar PWA
-
-          </button>button>
-
-        </div>div>
-
-      </div>div>
-
-    </nav>nav>
-
-
-
-
-        <!-- HERO SECTION -->
-
-    <section class="relative pt-40 pb-20 md:pt-60 md:pb-40 px-6 overflow-hidden">
-
-              <!-- Decoración de fondo -->
-
-      <div class="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-emerald-100/30 rounded-full blur-[120px] pointer-events-none"></div>div>
-
-      <div class="absolute bottom-[0%] left-[-10%] w-[600px] h-[600px] bg-rose-100/20 rounded-full blur-[100px] pointer-events-none"></div>div>
-
-      <div class="max-w-7xl mx-auto text-center relative z-10">
-
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-8 border border-emerald-100 animate-fade-up">
-
-          <i data-lucide="sparkles" class="w-3 h-3"></i>i> La verdad es tu mejor medicina
-
-        </div>div>
-
-        <h1 class="text-6xl md:text-9xl font-serif italic font-black text-slate-900 tracking-tighter leading-[0.9] mb-12 animate-fade-up" style="animation-delay: 0.1s;">
-
-          Tu integridad <br> biológica es <br> <span class="text-emerald-500">nuestra misión.</span>span>
-
-        </h1>h1>
-
-        <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-500 leading-relaxed mb-12 font-medium animate-fade-up" style="animation-delay: 0.2s;">
-
-          VERIS decodifica los químicos invisibles, nanoplásticos y disparadores 
-
-                          epigenéticos que las marcas ocultan. No solo escaneas productos, 
-
-                          aseguras tu futuro celular.
-
-        </p>p>
-
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-up" style="animation-delay: 0.3s;">
-
-          <button class="group px-10 py-5 bg-slate-900 text-white rounded-full font-black text-xs uppercase tracking-[0.2em] shadow-2xl flex items-center gap-4 hover:bg-emerald-600 transition-colors">
-
-            Comenzar Auditoría <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>i>
-
-          </button>button>
-
-          <div class="flex items-center gap-3">
-
-            <div class="flex -space-x-3">
-
-              <div class="h-10 w-10 rounded-full bg-slate-200 border-2 border-white"></div>div>
-
-              <div class="h-10 w-10 rounded-full bg-emerald-100 border-2 border-white"></div>div>
-
-              <div class="h-10 w-10 rounded-full bg-rose-100 border-2 border-white"></div>div>
-
-            </div>div>
-
-            <p class="text-[10px] font-bold text-slate-400 uppercase">+15k BioVeristas Activos</p>p>
-
-          </div>div>
-
-        </div>div>
-
-      </div>div>
-
-    </section>section>
-
-
-
-
-        <!-- BENTO GRID FEATURES -->
-
-    <section id="tecnologia" class="py-20 px-6 max-w-7xl mx-auto">
-
-      <div class="mb-16">
-
-        <p class="text-[10px] font-black uppercase tracking-[0.4em] mb-4 text-emerald-600">Capas de Inteligencia</p>p>
-
-        <h2 class="text-4xl md:text-6xl font-serif italic font-black mb-6 tracking-tighter text-slate-900">Lo que otros no ven, <br> nosotros lo decodificamos.</h2>h2>
-
-        <p class="max-w-2xl text-lg text-slate-500 leading-relaxed">Diseñamos un sistema de análisis forense que evalúa cada átomo de tu consumo diario.</p>p>
-
-      </div>div>
-
-
-
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                    <!-- Card 1: Epigenética -->
-
-        <div class="md:col-span-2 h-[500px] flex flex-col justify-end glass border border-slate-100 rounded-[3rem] p-10 bento-card relative">
-
-          <div class="absolute top-10 right-10">
-
-            <div class="h-32 w-32 bg-emerald-50 rounded-full flex items-center justify-center border border-emerald-100">
-
-              <i data-lucide="dna" class="w-12 h-12 text-emerald-500"></i>i>
-
-            </div>div>
-
-          </div>div>
-
-          <div class="max-w-md relative z-10">
-
-            <h3 class="text-3xl font-serif font-black italic mb-4">Análisis Epigenético</h3>h3>
-
-            <p class="text-slate-500 leading-relaxed mb-6">
-
-              Identificamos los químicos que activan enfermedades hereditarias (Diabetes, Alzheimer). Tus genes cargan el arma, lo que compras aprieta el gatillo.
-
-            </p>p>
-
-            <div class="flex gap-2">
-
-              <span class="px-3 py-1 bg-rose-50 text-rose-500 rounded-lg text-[9px] font-black uppercase">Neurotoxicidad</span>span>
-
-              <span class="px-3 py-1 bg-amber-50 text-amber-500 rounded-lg text-[9px] font-black uppercase">Metabolismo</span>span>
-
-            </div>div>
-
-          </div>div>
-
-        </div>div>
-
-
-
-
-                    <!-- Card 2: Sello -->
-
-        <div class="bg-slate-900 text-white rounded-[3rem] p-10 bento-card flex flex-col justify-between shadow-2xl">
-
-          <div class="p-4 bg-emerald-500/20 rounded-2xl w-fit text-emerald-400">
-
-            <i data-lucide="shield-check" class="w-8 h-8"></i>i>
-
-          </div>div>
-
-          <div>
-
-            <h3 class="text-2xl font-serif font-black italic mb-4">Sello Veris-Life</h3>h3>
-
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-
-              Certificación independiente para marcas de máxima integridad biológica. Si no es Veris, no es real.
-
-            </p>p>
-
-            <button class="text-emerald-400 text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
-
-              Auditar Marca <i data-lucide="chevron-right" class="w-3 h-3"></i>i>
-
-            </button>button>
-
-          </div>
-
-        </div>
-
-
-
-
-                    <!-- Card 3: Nanoplásticos -->
-
-        <div class="bg-gradient-to-br from-white to-emerald-50/30 border border-slate-100 rounded-[3rem] p-10 bento-card flex flex-col justify-between h-[450px]">
-
-          <div class="flex justify-between items-start">
-
-            <div class="h-14 w-14 bg-slate-900 rounded-2xl flex items-center justify-center text-white">
-
-              <i data-lucide="droplets" class="w-7 h-7"></i>i>
-
-            </div>
-
-            <p class="text-4xl font-serif font-black italic text-slate-300">#01</p>p>
-
-          </div>
-
-          <div>
-
-            <h3 class="text-xl font-serif font-black italic mb-2">Fuga de Nanoplásticos</h3>h3>
-
-            <p class="text-slate-500 text-xs leading-relaxed">
-
-              Analizamos el impacto del transporte y el calor en envases PET. Detectamos micropartículas invisibles.
-
-            </p>p>
-
-          </div>
-
-        </div>
-
-
-
-
-                    <!-- Card 4: Tracker -->
-
-        <div class="md:col-span-2 glass border border-slate-100 rounded-[3rem] p-10 bento-card flex flex-col md:flex-row gap-10 items-center overflow-hidden">
-
-          <div class="flex-1">
-
-            <h3 class="text-3xl font-serif font-black italic mb-4">Bio-Tracker Veris</h3>h3>
-
-            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-
-              Rastreamos la sumatoria diaria de químicos en tu cuerpo. Veris mide tu carga tóxica acumulativa para prevenir colapsos sistémicos.
-
-            </p>p>
-
-            <div class="space-y-3">
-
-              <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 w-[40%]"></div></div>
-
-              <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 w-[70%]"></div></div>
-
-            </div>
-
-          </div>
-
-          <div class="w-full md:w-64 bg-slate-50 rounded-3xl p-6 border border-slate-100 flex flex-col items-center">
-
-            <div class="h-24 w-24 border-4 border-white shadow-xl rounded-full bg-white flex items-center justify-center text-amber-500">
-
-              <i data-lucide="zap" class="w-10 h-10"></i>i>
-
-            </div>
-
-            <p class="mt-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Carga Celular</p>p>
-
-            <p class="text-xl font-serif font-black italic text-slate-800">Óptimo</p>p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>section>
-
-
-
-
-        <!-- MISSION SECTION -->
-
-    <section id="ciencia" class="bg-slate-900 py-32 px-6">
-
-      <div class="max-w-7xl mx-auto">
-
-        <p class="text-[10px] font-black uppercase tracking-[0.4em] mb-4 text-emerald-400">Nuestra Filosofía</p>p>
-
-        <h2 class="text-4xl md:text-6xl font-serif italic font-black mb-6 tracking-tighter text-white">Contra el Greenwashing <br> Industrial.</h2>h2>
-
-        <p class="max-w-2xl text-lg text-slate-400 leading-relaxed mb-16">
-
-          Exponemos la realidad de los procesos de mezclado ocultos y envases tóxicos que las marcas "Bio" ignoran.
-
-        </p>p>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-
-          <div class="p-8 bg-slate-800/50 rounded-[2.5rem] border border-slate-700/50">
-
-            <i data-lucide="microscope" class="text-emerald-400 mb-6 w-8 h-8"></i>i>
-
-            <h4 class="text-white font-serif italic font-bold text-lg mb-2">Metales Pesados</h4>h4>
-
-            <p class="text-slate-400 text-xs leading-relaxed">Detección predictiva según suelo de origen.</p>p>
-
-          </div>
-
-          <div class="p-8 bg-slate-800/50 rounded-[2.5rem] border border-slate-700/50">
-
-            <i data-lucide="wind" class="text-emerald-400 mb-6 w-8 h-8"></i>i>
-
-            <h4 class="text-white font-serif italic font-bold text-lg mb-2">Fragancias</h4>h4>
-
-            <p class="text-slate-400 text-xs leading-relaxed">Desglose de ftalatos en perfumes y sprays.</p>p>
-
-          </div>
-
-          <div class="p-8 bg-slate-800/50 rounded-[2.5rem] border border-slate-700/50">
-
-            <i data-lucide="beaker" class="text-emerald-400 mb-6 w-8 h-8"></i>i>
-
-            <h4 class="text-white font-serif italic font-bold text-lg mb-2">Surfactantes</h4>h4>
-
-            <p class="text-slate-400 text-xs leading-relaxed">Análisis de etoxilación y restos de dioxanos.</p>p>
-
-          </div>
-
-          <div class="p-8 bg-slate-800/50 rounded-[2.5rem] border border-slate-700/50">
-
-            <i data-lucide="layers" class="text-emerald-400 mb-6 w-8 h-8"></i>i>
-
-            <h4 class="text-white font-serif italic font-bold text-lg mb-2">Procesado</h4>h4>
-
-            <p class="text-slate-400 text-xs leading-relaxed">Auditoría de auxiliares químicos invisibles.</p>p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>section>
-
-
-
-
-        <!-- FOOTER -->
-
-    <footer class="py-20 px-6 border-t border-slate-100 bg-white">
-
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-20">
-
-        <div class="max-w-sm">
-
-          <h1 class="text-3xl font-serif italic font-black tracking-tighter mb-6 text-slate-900">VERIS.</h1>h1>
-
-          <p class="text-slate-500 text-sm leading-relaxed mb-8">
-
-            Agencia de calificación de integridad biológica dedicada a proteger el futuro celular de la humanidad.
-
-          </p>p>
-
-          <div class="flex gap-4">
-
-            <div class="h-10 w-10 bg-slate-100 rounded-xl"></div>
-
-            <div class="h-10 w-10 bg-slate-100 rounded-xl"></div>
-
-            <div class="h-10 w-10 bg-slate-100 rounded-xl"></div>
-
-          </div>
-
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-16 text-[10px] font-black uppercase tracking-widest text-slate-400">
-
-          <div class="space-y-4">
-
-            <p class="text-slate-900">Compañía</p>p>
-
-            <a href="#" class="block hover:text-emerald-500">Acerca</a>a>
-
-            <a href="#" class="block hover:text-emerald-500">Carreras</a>a>
-
-            <a href="#" class="block hover:text-emerald-500">Legal</a>a>
-
-          </div>
-
-          <div class="space-y-4">
-
-            <p class="text-slate-900">Ciencia</p>p>
-
-            <a href="#" class="block hover:text-emerald-500">Metodología</a>a>
-
-            <a href="#" class="block hover:text-emerald-500">Estudios</a>a>
-
-            <a href="#" class="block hover:text-emerald-500">Whitepaper</a>a>
-
-          </div>
-
-          <div class="space-y-4">
-
-            <p class="text-slate-900">Contacto</p>p>
-
-            <a href="#" class="block hover:text-emerald-500">Soporte</a>a>
-
-            <a href="#" class="block hover:text-emerald-500">Partners</a>a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-4">
-
-        <p class="text-[9px] font-bold text-slate-400 uppercase">© 2025 VERIS BIOTECH. TODOS LOS DERECHOS RESERVADOS.</p>p>
-
-        <div class="flex gap-6 text-[9px] font-bold text-slate-400 uppercase">
-
-          <a href="#">Privacidad</a>a>
-
-          <a href="#">Cookies</a>a>
-
-        </div>
-
-      </div>
-
-    </footer>footer>
-
-
-
-
-    <script>
-
-      // Inicializar iconos de Lucide
-
-              lucide.createIcons();
-
-
-
-
-      // Efecto de scroll para el Navbar
-
-              window.addEventListener('scroll', () => {
-
-                const navbar = document.getElementById('navbar');
-
-                if (window.scrollY > 50) {
-
-                                  navbar.classList.add('glass', 'py-3', 'shadow-sm', 'border-b', 'border-slate-100');
-
-                } else {
-
-                                  navbar.classList.remove('glass', 'py-3', 'shadow-sm', 'border-b', 'border-slate-100');
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VERIS | La verdad es tu mejor medicina</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+      <style>
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                body { 
+                              background-color: #FBFBFE;
+                              font-family: 'Inter', sans-serif;
+                              color: #0F172A;
+                              line-height: 1.6;
+                }
+                .serif { font-family: 'Playfair Display', serif; }
+                .emerald { color: #10B981; }
+                .rose { color: #F43F5E; }
+                .slate { color: #0F172A; }
+
+                nav {
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              right: 0;
+                              background: rgba(251, 251, 254, 0.95);
+                              backdrop-filter: blur(10px);
+                              z-index: 100;
+                              border-bottom: 1px solid rgba(15, 23, 42, 0.05);
                 }
 
-              });
+                nav .container {
+                              max-width: 1200px;
+                              margin: 0 auto;
+                              padding: 1.5rem 2rem;
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                }
 
-    </script>
+                .logo {
+                              font-size: 1.5rem;
+                              font-weight: 700;
+                              letter-spacing: -0.5px;
+                }
 
-  </body>body>
+                nav a {
+                              font-size: 0.75rem;
+                              font-weight: 600;
+                              letter-spacing: 0.1em;
+                              text-transform: uppercase;
+                              color: #64748B;
+                              text-decoration: none;
+                              transition: color 0.3s;
+                              margin-left: 2rem;
+                }
 
+                nav a:hover {
+                              color: #10B981;
+                }
+
+                .hero {
+                              padding-top: 8rem;
+                              padding-bottom: 6rem;
+                              text-align: center;
+                }
+
+                .hero h1 {
+                              font-family: 'Playfair Display', serif;
+                              font-size: clamp(2.5rem, 8vw, 5rem);
+                              font-weight: 700;
+                              font-style: italic;
+                              letter-spacing: -1px;
+                              margin-bottom: 1.5rem;
+                              line-height: 1.1;
+                }
+
+                .hero p {
+                              max-width: 600px;
+                              margin: 0 auto 3rem;
+                              font-size: 1.1rem;
+                              color: #64748B;
+                              font-weight: 400;
+                }
+
+                .btn {
+                              display: inline-block;
+                              padding: 0.875rem 2.5rem;
+                              font-size: 0.75rem;
+                              font-weight: 700;
+                              letter-spacing: 0.1em;
+                              text-transform: uppercase;
+                              border: none;
+                              border-radius: 50px;
+                              cursor: pointer;
+                              transition: all 0.3s;
+                              text-decoration: none;
+                }
+
+                .btn-primary {
+                              background-color: #0F172A;
+                              color: white;
+                }
+
+                .btn-primary:hover {
+                              background-color: #10B981;
+                              transform: translateY(-2px);
+                }
+
+                .btn-secondary {
+                              background-color: white;
+                              color: #0F172A;
+                              border: 2px solid #0F172A;
+                }
+
+                .btn-secondary:hover {
+                              background-color: #0F172A;
+                              color: white;
+                }
+
+                section {
+                              padding: 6rem 2rem;
+                              max-width: 1200px;
+                              margin: 0 auto;
+                }
+
+                .section-title {
+                              font-family: 'Playfair Display', serif;
+                              font-size: clamp(1.875rem, 6vw, 3.5rem);
+                              font-style: italic;
+                              font-weight: 700;
+                              margin-bottom: 1rem;
+                              letter-spacing: -0.5px;
+                }
+
+                .section-subtitle {
+                              font-size: 0.75rem;
+                              font-weight: 700;
+                              letter-spacing: 0.15em;
+                              text-transform: uppercase;
+                              color: #10B981;
+                              margin-bottom: 1rem;
+                }
+
+                .section-desc {
+                              font-size: 1rem;
+                              color: #64748B;
+                              max-width: 600px;
+                              margin-bottom: 3rem;
+                }
+
+                .grid {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                              gap: 2rem;
+                              margin-top: 3rem;
+                }
+
+                .card {
+                              padding: 2.5rem 2rem;
+                              background: white;
+                              border: 1px solid #E2E8F0;
+                              border-radius: 1rem;
+                              transition: all 0.3s;
+                }
+
+                .card:hover {
+                              transform: translateY(-4px);
+                              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+                }
+
+                .card-icon {
+                              width: 60px;
+                              height: 60px;
+                              margin-bottom: 1.5rem;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                }
+
+                .icon-circle {
+                              width: 100%;
+                              height: 100%;
+                              border-radius: 50%;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              font-size: 1.5rem;
+                }
+
+                .icon-emerald {
+                              background-color: #ECFDF5;
+                              color: #10B981;
+                }
+
+                .icon-rose {
+                              background-color: #FFF1F2;
+                              color: #F43F5E;
+                }
+
+                .card h3 {
+                              font-family: 'Playfair Display', serif;
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                              margin-bottom: 0.75rem;
+                              letter-spacing: -0.3px;
+                }
+
+                .card p {
+                              font-size: 0.95rem;
+                              color: #64748B;
+                              line-height: 1.7;
+                }
+
+                .dark-section {
+                              background-color: #0F172A;
+                              color: white;
+                }
+
+                .dark-section .section-title {
+                              color: white;
+                }
+
+                .dark-section .section-desc {
+                              color: #CBD5E1;
+                }
+
+                .dark-section .card {
+                              background-color: rgba(255, 255, 255, 0.05);
+                              border-color: rgba(255, 255, 255, 0.1);
+                }
+
+                .dark-section .card h3 {
+                              color: white;
+                }
+
+                .dark-section .card p {
+                              color: #CBD5E1;
+                }
+
+                footer {
+                              background-color: white;
+                              border-top: 1px solid #E2E8F0;
+                              padding: 3rem 2rem;
+                              text-align: center;
+                }
+
+                footer p {
+                              font-size: 0.75rem;
+                              color: #94A3B8;
+                              letter-spacing: 0.05em;
+                }
+
+                .lang-toggle {
+                              font-size: 0.75rem;
+                              font-weight: 600;
+                              background: none;
+                              border: none;
+                              cursor: pointer;
+                              color: #64748B;
+                              text-transform: uppercase;
+                              letter-spacing: 0.1em;
+                }
+
+                .lang-toggle:hover {
+                              color: #10B981;
+                }
+
+                .divider {
+                              height: 1px;
+                              background: rgba(15, 23, 42, 0.1);
+                              margin: 2rem 0;
+                }
+            </style>
+  </head>
+  <body>
+        <!-- Navigation -->
+        <nav>
+                  <div class="container">
+                                <div class="logo">VERIS</div>div>
+                                <div style="display: flex; gap: 2rem; align-items: center;">
+                                                  <a href="#tech" style="margin-left: 0;">Tecnología</a>a>
+                                                  <a href="#epigenetic">Epigenética</a>a>
+                                                  <a href="#tracker">Bio-Tracker</a>a>
+                                                  <a href="#blog">Blog</a>a>
+                                                  <button class="lang-toggle" onclick="toggleLang()">EN</button>button>
+                                </div>div>
+                  </div>div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+                  <h1>Tu integridad<br>biológica es<br><span class="emerald">nuestra misión</span>span></h1>
+                <p id="hero-desc">Escudo forense de salud que decodifica químicos invisibles, nanoplásticos y disparadores de enfermedades. Prevención antes que tratamiento.</p>p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <button class="btn btn-primary" id="btn-audit">Comenzar Auditoría</button>button>
+                            <button class="btn btn-secondary" id="btn-learn">Saber Más</button>button>
+                </div>div>
+        </section>section>
+  
+      <!-- Technology Section -->
+      <section id="tech">
+              <div class="section-subtitle">Inteligencia Artificial</div>div>
+              <h2 class="section-title">Escaneo Profundo</h2>
+              <p class="section-desc" id="tech-desc">Nuestro sistema de IA analiza composición química en tiempo real, identificando componentes tóxicos invisibles a simple vista.</p>p>
+              
+              <div class="grid">
+                          <div class="card">
+                                          <div class="card-icon">
+                                                              <div class="icon-circle icon-emerald">✓</div>div>
+                                          </div>div>
+                                          <h3 id="card1-title">Análisis Profundo</h3>
+                                          <p id="card1-desc">Decodificación molecular de ingredientes y contaminantes.</p>p>
+                          </div>div>
+                          
+                          <div class="card">
+                                          <div class="card-icon">
+                                                              <div class="icon-circle icon-rose">◆</div>div>
+                                          </div>div>
+                                          <h3 id="card2-title">Verificación Química</h3>
+                                          <p id="card2-desc">Detección de nanoplásticos, metales pesados y toxinas.</p>p>
+                          </div>div>
+                          
+                          <div class="card">
+                                          <div class="card-icon">
+                                                              <div class="icon-circle icon-emerald">⚡</div>div>
+                                          </div>div>
+                                          <h3 id="card3-title">Resultados Instantáneos</h3>
+                                          <p id="card3-desc">Reporte completo en menos de 60 segundos con evidencia científica.</p>p>
+                          </div>div>
+              </div>div>
+      </section>section>
+  
+      <!-- Epigenetic Module -->
+      <section id="epigenetic">
+              <div class="section-subtitle">Prevención Activa</div>div>
+              <h2 class="section-title">Módulo Epigenético</h2>
+              <p class="section-desc" id="epi-desc">Identifica disparadores químicos de enfermedades heredadas. Tus genes cargan el arma, lo que compras aprieta el gatillo.</p>p>
+              
+              <div class="grid">
+                          <div class="card">
+                                          <div class="card-icon">
+                                                              <div class="icon-circle icon-rose">◐</div>div>
+                                          </div>div>
+                                          <h3 id="epi1-title">Alzheimer</h3>
+                                          <p id="epi1-desc">Neuroinflamación por metales pesados en cosméticos.</p>p>
+                          </div>div>
+                          
+                          <div class="card">
+                                          <div class="card-icon">
+                                                              <div class="icon-circle icon-emerald">◆</div>div>
+                                          </div>div>
+                                          <h3 id="epi2-title">Diabetes</h3>
+                                          <p id="epi2-desc">Disruptores endocrinos en alimentos ultraprocesados.</p>p>
+                          </div>div>
+                          
+                          <div class="card">
+                                          <div class="card-icon">
+                                                              <div class="icon-circle icon-rose">▲</div>div>
+                                          </div>div>
+                                          <h3 id="epi3-title">Cáncer</h3>
+                                          <p id="epi3-desc">Carcinógenos clasificados en productos de consumo diario.</p>p>
+                          </div>div>
+              </div>div>
+      </section>section>
+  
+      <!-- Bio-Tracker -->
+      <section id="tracker" style="background-color: #F8FAFC;">
+              <div class="section-subtitle">Monitoreo Continuo</div>div>
+              <h2 class="section-title">Bio-Tracker CalAI</h2>
+              <p class="section-desc" id="tracker-desc">Rastreamos tu carga tóxica acumulativa diaria. Prevención de colapso sistémico antes que ocurra.</p>p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                          <div style="text-align: center; padding: 2rem;">
+                                          <div style="font-size: 3rem; font-weight: 700; color: #10B981; margin-bottom: 0.5rem;">40%</div>div>
+                                          <p style="color: #64748B; font-size: 0.95rem;" id="stat1">Exposición controlada</p>p>
+                          </div>div>
+                          <div style="text-align: center; padding: 2rem;">
+                                          <div style="font-size: 3rem; font-weight: 700; color: #F43F5E; margin-bottom: 0.5rem;">8/10</div>div>
+                                          <p style="color: #64748B; font-size: 0.95rem;" id="stat2">Puntaje de pureza</p>p>
+                          </div>div>
+                          <div style="text-align: center; padding: 2rem;">
+                                          <div style="font-size: 3rem; font-weight: 700; color: #0F172A; margin-bottom: 0.5rem;">15d</div>div>
+                                          <p style="color: #64748B; font-size: 0.95rem;" id="stat3">Hasta recuperación</p>p>
+                          </div>div>
+              </div>div>
+      </section>section>
+  
+      <!-- Dark Section: Blog -->
+      <section id="blog" class="dark-section">
+              <div class="section-subtitle" style="color: #10B981;">Investigación</div>div>
+              <h2 class="section-title">Noticias & Insights</h2>
+              <p class="section-desc" id="blog-desc">Descubre artículos científicos sobre salud biológica, química de productos y prevención epigenética.</p>p>
+              
+              <div class="grid">
+                          <div class="card">
+                                          <div style="font-size: 0.75rem; color: #10B981; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;" id="blog1-date">2024-12-20</div>div>
+                                          <h3 id="blog1-title">Nanoplásticos en Cosméticos Premium</h3>
+                                          <p id="blog1-desc">Análisis de 50 marcas revelaron presencia de micropartículas en cremas y serums de lujo.</p>p>
+                          </div>div>
+                          
+                          <div class="card">
+                                          <div style="font-size: 0.75rem; color: #F43F5E; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;" id="blog2-date">2024-12-15</div>div>
+                                          <h3 id="blog2-title">Endocrinos Ocultos en Alimentos</h3>
+                                          <p id="blog2-desc">Los disruptores hormonales más peligrosos que NO aparecen en etiquetas de nutrición.</p>p>
+                          </div>div>
+                          
+                          <div class="card">
+                                          <div style="font-size: 0.75rem; color: #10B981; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;" id="blog3-date">2024-12-10</div>div>
+                                          <h3 id="blog3-title">Regulación Epigenética por Dieta</h3>
+                                          <p id="blog3-desc">Cómo 30 días de eliminación tóxica puede reversar expresión génica de enfermedades.</p>p>
+                          </div>div>
+              </div>div>
+      </section>section>
+  
+      <!-- CTA Section -->
+      <section style="text-align: center;">
+              <h2 class="section-title" style="margin-bottom: 1.5rem;" id="cta-title">Registro PWA</h2>
+              <p class="section-desc" id="cta-desc" style="margin-bottom: 2rem;">Descarga VERIS como aplicación móvil. Disponible para iOS y Android sin conexión continua.</p>p>
+              <button class="btn btn-primary" id="btn-pwa">Descargar Aplicación</button>button>
+      </section>section>
+  
+      <!-- Footer -->
+      <footer>
+                <p id="footer-text">© 2024 VERIS BIOTECH | La verdad es tu mejor medicina | Síguenos en redes</p>p>
+      </footer>
+
+        <script>
+                  let lang = 'es';
+
+                  const translations = {
+                                es: {
+                                                  'hero-desc': 'Escudo forense de salud que decodifica químicos invisibles, nanoplásticos y disparadores de enfermedades. Prevención antes que tratamiento.',
+                                                  'btn-audit': 'Comenzar Auditoría',
+                                                  'btn-learn': 'Saber Más',
+                                                  'tech-desc': 'Nuestro sistema de IA analiza composición química en tiempo real, identificando componentes tóxicos invisibles a simple vista.',
+                                                  'card1-title': 'Análisis Profundo',
+                                                  'card1-desc': 'Decodificación molecular de ingredientes y contaminantes.',
+                                                  'card2-title': 'Verificación Química',
+                                                  'card2-desc': 'Detección de nanoplásticos, metales pesados y toxinas.',
+                                                  'card3-title': 'Resultados Instantáneos',
+                                                  'card3-desc': 'Reporte completo en menos de 60 segundos con evidencia científica.',
+                                                  'epi-desc': 'Identifica disparadores químicos de enfermedades heredadas. Tus genes cargan el arma, lo que compras aprieta el gatillo.',
+                                                  'epi1-title': 'Alzheimer',
+                                                  'epi1-desc': 'Neuroinflamación por metales pesados en cosméticos.',
+                                                  'epi2-title': 'Diabetes',
+                                                  'epi2-desc': 'Disruptores endocrinos en alimentos ultraprocesados.',
+                                                  'epi3-title': 'Cáncer',
+                                                  'epi3-desc': 'Carcinógenos clasificados en productos de consumo diario.',
+                                                  'tracker-desc': 'Rastreamos tu carga tóxica acumulativa diaria. Prevención de colapso sistémico antes que ocurra.',
+                                                  'stat1': 'Exposición controlada',
+                                                  'stat2': 'Puntaje de pureza',
+                                                  'stat3': 'Hasta recuperación',
+                                                  'blog-desc': 'Descubre artículos científicos sobre salud biológica, química de productos y prevención epigenética.',
+                                                  'blog1-title': 'Nanoplásticos en Cosméticos Premium',
+                                                  'blog1-desc': 'Análisis de 50 marcas revelaron presencia de micropartículas en cremas y serums de lujo.',
+                                                  'blog2-title': 'Endocrinos Ocultos en Alimentos',
+                                                  'blog2-desc': 'Los disruptores hormonales más peligrosos que NO aparecen en etiquetas de nutrición.',
+                                                  'blog3-title': 'Regulación Epigenética por Dieta',
+                                                  'blog3-desc': 'Cómo 30 días de eliminación tóxica puede reversar expresión génica de enfermedades.',
+                                                  'cta-title': 'Registro PWA',
+                                                  'cta-desc': 'Descarga VERIS como aplicación móvil. Disponible para iOS y Android sin conexión continua.',
+                                                  'btn-pwa': 'Descargar Aplicación',
+                                                  'footer-text': '© 2024 VERIS BIOTECH | La verdad es tu mejor medicina | Síguenos en redes'
+                                },
+                                en: {
+                                                  'hero-desc': 'Health forensic shield decoding invisible chemicals, nanoplastics and disease triggers. Prevention over treatment.',
+                                                  'btn-audit': 'Start Audit',
+                                                  'btn-learn': 'Learn More',
+                                                  'tech-desc': 'Our AI system analyzes chemical composition in real time, identifying invisible toxic components.',
+                                                  'card1-title': 'Deep Analysis',
+                                                  'card1-desc': 'Molecular decoding of ingredients and contaminants.',
+                                                  'card2-title': 'Chemical Verification',
+                                                  'card2-desc': 'Detection of nanoplastics, heavy metals and toxins.',
+                                                  'card3-title': 'Instant Results',
+                                                  'card3-desc': 'Complete report in under 60 seconds with scientific evidence.',
+                                                  'epi-desc': 'Identifies chemical triggers of inherited diseases. Your genes load the weapon, what you buy pulls the trigger.',
+                                                  'epi1-title': 'Alzheimer',
+                                                  'epi1-desc': 'Neuroinflammation from heavy metals in cosmetics.',
+                                                  'epi2-title': 'Diabetes',
+                                                  'epi2-desc': 'Endocrine disruptors in ultra-processed foods.',
+                                                  'epi3-title': 'Cancer',
+                                                  'epi3-desc': 'Carcinogens found in daily consumer products.',
+                                                  'tracker-desc': 'We track your cumulative daily toxic load. Prevent systemic collapse before it happens.',
+                                                  'stat1': 'Controlled exposure',
+                                                  'stat2': 'Purity score',
+                                                  'stat3': 'Until recovery',
+                                                  'blog-desc': 'Discover scientific articles on biological health, product chemistry and epigenetic prevention.',
+                                                  'blog1-title': 'Nanoplastics in Premium Cosmetics',
+                                                  'blog1-desc': 'Analysis of 50 brands revealed microparticles in luxury creams and serums.',
+                                                  'blog2-title': 'Hidden Endocrines in Food',
+                                                  'blog2-desc': 'The most dangerous hormone disruptors that DON\'T appear on nutrition labels.',
+                                                  'blog3-title': 'Epigenetic Regulation by Diet',
+                                                  'blog3-desc': 'How 30 days of toxic elimination can reverse disease gene expression.',
+                                                  'cta-title': 'PWA Registration',
+                                                  'cta-desc': 'Download VERIS as a mobile app. Available for iOS and Android without continuous connection.',
+                                                  'btn-pwa': 'Download App',
+                                                  'footer-text': '© 2024 VERIS BIOTECH | The truth is your best medicine | Follow us on social media'
+                                }
+                  };
+
+                  function toggleLang() {
+                                lang = lang === 'es' ? 'en' : 'es';
+                                const button = event.target;
+                                button.textContent = lang === 'es' ? 'EN' : 'ES';
+
+                                for (const [id, text] of Object.entries(translations[lang])) {
+                                                  const el = document.getElementById(id);
+                                                  if (el) el.textContent = text;
+                                }
+                  }
+        </script>
+  </body>
 </html>html>
-          </div>
-          </div>
-    </style>
-  </script></title>
+        </script>
+      </footer></h1>
+        </nav>
+  </body>
+      </style></title>
   </head>
